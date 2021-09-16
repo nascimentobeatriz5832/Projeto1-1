@@ -1,0 +1,149 @@
+<html>
+
+<head>
+
+    <script>
+        var saldo = 500.0;
+        var numeroconta = 12345;
+        var senhausuario = 7878
+
+		function senha() {
+			senhabi = Number(prompt("Qual a sua senha?"));
+			if (senhabi === senhausuario) {
+				alert("senha correta");
+			} else {
+				alert("senha invalida,tente novamente !");
+				senha();
+			}
+		}
+
+		function inicio() {
+			var nome = prompt(" Qual é o seu nome ?");
+			alert('olá ' + nome + ' Prazer ter você por aqui!');
+			conta();
+		}
+        
+
+        function conta() {
+            var conta = Number(prompt('Qual número da sua conta pessoal'));
+            if (conta == numeroconta) {
+                alert("conta válida");
+				senha();
+                opcao();
+               
+            } else {
+                alert("numero de conta invalido");
+                conta();
+            }
+		}
+            
+		function saldofixo() {
+			alert("O seu saldo  atual é de R$" + saldo);
+            senha();
+			opcao();
+		}
+		
+		function extrato() {
+			alert("ponto do açai R$ 45.00 / mercado public  200.00");
+			opcao();
+		}
+			
+		function saque() {
+			var saque = parseFloat(prompt('Qual o valor para saque?'));
+			if (isNaN(saque) || saque === '' || saque <= 0){
+				alert('Por favor, informe um número:');
+				opcao();
+				
+                
+			} else {
+				saldo -= saque;
+				if (saldo < 0){
+				   alert("operação inválda");
+				   saque();
+				}else{
+				   senha();
+				   saldofixo();
+				   opcao();
+				}
+			}
+		}
+        
+    
+        function deposito() {
+			var deposito = parseFloat(prompt('Qual o valor para depósito?'));
+			if (isNaN(deposito) || deposito === '' || deposito <= 0) {
+				alert("operação inválida ");
+				deposito();
+			} else {
+				saldo += deposito;
+				senha();
+				saldofixo();
+			}
+		}
+
+		function transferencia() {
+			var transferenciaconta = parseFloat(prompt('Qual o valor para transferencia ?'));
+			if (isNaN(transferenciaconta) || transferenciaconta === '' || transferenciaconta <=0) {
+				alert('operação inválida');
+				transferencia();
+				
+			} else {
+				saldo -= transferenciaconta;
+				if(saldo<0){
+				   alert("operação inválida ");
+				   transferencia();
+				}else{
+					senha();
+					saldofixo();
+
+				}
+		
+		   }
+
+		}			   
+			
+		function opcao() {
+
+			var escolha = parseInt(prompt(
+				'Selecione uma opcao : \n 1 Saldo \n 2 Extrato \n 3 Saque  \n 4 Depósito \n 5 Transferencia \n 6 Sair'));
+				
+
+			if (escolha === 1) {
+			      saldofixo();
+			}else if (escolha === 2) {
+				extrato();
+			} else if (escolha === 3) {
+				saque();
+			} else if (escolha === 4) {
+				deposito();
+			} else if (escolha === 5) {
+				transferencia();
+			} else if (escolha === 6) {
+				sair();
+			} else {
+				erro();
+			}
+		}
+	   
+		function erro() {
+			alert('Por favor, informe um número entre 1 e 6');
+			inicio();
+		}
+
+		function sair() {
+			var confirma = confirm('Você deseja sair?');
+			if (confirma) {
+				window.close();
+			} else {
+				inicio();
+			}
+		}
+		
+		inicio();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
