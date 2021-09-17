@@ -1,0 +1,147 @@
+*{
+    margin: 0px;;
+    padding: 10;
+    box-sizing: border-box;
+}
+body{
+
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+   margin: auto;
+   max-width: 1000px;
+   overflow: hidden;
+  }
+  
+  .titulo{
+      color:black;
+      font-size: 30px;
+      text-align: center;
+      margin: bottom 60px;;
+  }
+
+  /* Header */
+
+  header{
+      width: 100%;
+      height: 600px;
+      background: #403B4A;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(63, 51%, 82%, 0.658), hsla(260, 11%, 26%, 0.61)),url(https://images.pexels.com/photos/2747893/pexels-photo-2747893.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+      background-repeat: no-repeat;
+      background-size: 100%; 
+      background: cover;
+      background-attachment: fixed;
+      position: relative;
+    } 
+
+    nav{
+        text-align: right;
+        padding: 30px 50px 0 0;
+
+    }
+     nav> a{
+         color:black;
+         font-weight: 300;
+         text-decoration: none;
+         margin-right: 10px;
+     }
+
+
+   nav> a:hover{
+         text-decoration: underline;
+   }
+
+  .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    text-align: center;
+   
+}
+
+.textos-header h1{
+
+    font-size: 50px;
+    color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+
+}
+
+ .textos-header h2{
+     font-size: 25px;
+     font-weight: 300;
+     color: black;
+     font-family: Arial, Helvetica, sans-serif;
+
+ }
+
+   .wave{
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+   }
+
+   /* about */
+   .contenedor-sobre-nosotros{
+       display: flex;
+       justify-content: space-evenly;
+
+   }
+
+   .imagen-about-us{
+       width: 48%;
+   }
+   .sobre-nosotros .contenido-textos{
+       width: 48%;
+   }
+   .contenido-textos h3 {
+       margin-bottom:15px; 
+   }
+   .contenido-textos h3 span{
+       background: black;
+       color: white;
+       border-radius: 50px;
+       display: inline-block;
+       text-align: center;
+       width: 30px;
+       height: 30px;
+       padding: 2px;
+       box-shadow: 0 0 6px  rgba(0,0,0.5);
+       margin: 5px;
+       }
+
+    .contenido-textos p {
+        padding: 0px 0px 30px 15px;
+        font-weight: 300;
+        text-align: justify;
+    }
+    /* galeria*/
+    .portafolio{
+        background-color: white;
+    
+    }
+
+    .galeria-port{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap
+    }
+    .imagen-port{
+        width: 24%;
+        margin-bottom: 10px;
+        height: 200px;
+    }
+    .imagen-port >img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
